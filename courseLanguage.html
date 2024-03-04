@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccomYou | LanguageCourse</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="Gobal.css">
+    <link rel="stylesheet" href="course.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- baskerville clasico -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- baskerville libre -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    .tooltipPlace,
+    .tooltipPlaceA,
+    .tooltipPlaceB,
+    .tooltipPlaceC,
+    .tooltipPlaceD,
+    .tooltipPlaceE,
+    .tooltipPlaceF,
+    .tooltipPlaceG,
+    .tooltipPlaceH,
+    .tooltipPlaceI,
+    .tooltipPlaceJ {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltipSpan,
+    .tooltipSpanA,
+    .tooltipSpanB,
+    .tooltipSpanC,
+    .tooltipSpanD,
+    .tooltipSpanE,
+    .tooltipSpanF,
+    .tooltipSpanG,
+   .tooltipSpanH,
+    .tooltipSpanI,
+    .tooltipSpanJ {
+        visibility: hidden;
+        position: absolute;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        border-radius: 4px;
+        /* Optional: Add a small border */
+        /* Position the tooltip below the trigger element */
+        top: 70%;
+        left: 50%;
+        /* Center the tooltip horizontally */
+        transform: translateX(-50%);
+        /* Optional: Add a little animation */
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 30;
+    }
+    .tooltipPlace:hover .tooltipSpan {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tooltipPlaceA:hover .tooltipSpanA {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tooltipPlaceB:hover .tooltipSpanB {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tooltipPlaceC:hover .tooltipSpanC {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tooltipPlaceD:hover .tooltipSpanD {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tooltipPlaceE:hover .tooltipSpanE {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tooltipPlaceF:hover .tooltipSpanF {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tooltipPlaceG:hover .tooltipSpanG {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltipPlaceH:hover .tooltipSpaH {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltipPlaceI:hover .tooltipSpanI {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltipPlaceJ:hover .tooltipSpanJ {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+
+<body>
+
+    <nav class=" sticky top-0 |w-full z-20  start-0 bg-white/30 backdrop-blur-xl">
+        <div class=" flex flex-wrap items-center justify-between   py-4  px-20 ">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="img/logo.png" class="h-5" alt="Flowbite Logo">
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a  href="signIn.html"
+                    class=" flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">JoinNow
+            </a>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 text-black libre-baskerville-regular">
+                    <li class="">
+                        <a href="home.html"
+                            class="block py-2 px-3  md:p-0 border-b-2 border-transparent hover:border-gray-300 duration-100 "
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="course.html" class="block py-2 px-3  md:p-0  border-b-2 brownBor duration-100">Course</a>
+                    </li>
+                    <li>
+                        <a href="comunity.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100">Comunity</a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="CourseArea ">
+        <div class=" flex | w-full h-full pr-20  mt-14">
+
+            <div class="flex  | w-full h-full " id="content">
+                <div class="contentArea | h-full w-full px-20">
+                    <div class="w-40">
+                        <a href="course.html" class="text-lg py-3 text-gray-400 hover:text-gray-300">
+                            ◀︎ Back
+
+                        </a>
+                      
+
+                    </div>
+
+                    <div class="textArea | monaSans mt-4" id="titleUp">
+                        <h1 class="text-6xl font-bold  brownOri">English in <br>  Language Course</h1>
+                        <p class="text-md mt-2 h-5">Now start from zero</p>
+                        <p class="grayFont text-sm mt-5">10k Student</p>
+                    </div>
+
+                    <div class="content w-full | flex flex-wrap" id="conUp">
+
+                        <a href="language00.html"
+                            class="tooltipPlace | w-40 h-20 grayOri mt-10   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">00</h1>
+                            <span class="tooltipSpan | py-2 px-3 text-sm">opening</span>
+                    </a>
+                        <div href="#"
+                            class="tooltipPlaceA | w-40 h-20 grayOri mt-10   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">01</h1>
+                            <span class="tooltipSpanA | py-2 px-3 text-sm">A,An,The</span>
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceB | w-40 h-20 grayOri mt-10   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">02</h1>
+                            <span class="tooltipSpanB | py-2 px-3 text-sm">She,He,It</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceC | w-40 h-20 grayOri mt-10   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">03</h1>
+                            <span class="tooltipSpanC | py-2 px-3 text-sm">Is,Am,Are</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceD | w-40 h-20 grayOri mt-10   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">04</h1>
+                            <span class="tooltipSpanD | py-2 px-3 text-sm">10 Vocab</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceE | w-40 h-20 grayOri mt-5   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">05</h1>
+                            <span class="tooltipSpanE | py-2 px-3 text-sm">plural</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceF | w-40 h-20 grayOri mt-5   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">06</h1>
+                            <span class="tooltipSpanF | py-2 px-3 text-sm">not plural</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceG | w-40 h-20 grayOri mt-5   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">07</h1>
+                            <span class="tooltipSpanG | py-2 px-3 text-sm">object,subject</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceH | w-40 h-20 grayOri mt-5   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">08</h1>
+                            <span class="tooltipSpanH | py-2 px-3 text-sm">12 Vocab</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceI | w-40 h-20 grayOri mt-5   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">09</h1>
+                            <span class="tooltipSpanI | py-2 px-3 text-sm">simplePresent</span>
+
+                        </div>
+                        <div href="#"
+                            class="tooltipPlaceJ | w-40 h-20 grayOri mt-5   rounded-xl mr-5 cursor-pointer | text-center flex justify-center items-center | ring-gray-300 ring-1 ">
+                            <h1 class="text-4xl monaSans font-bold gray-font">10</h1>
+                            <span class="tooltipSpanJ | py-2 px-3 text-sm">exam No.1</span>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="comment |  h-full  borderOriL | " style="width: 500px;">
+                    <!-- img dan textcomment -->
+                    <div class="pl-4">
+                        <div class="justify-center flex items-center | w-96 h-56 rounded-3xl grayOri" id="imgbesar">
+                            <img src="img/langHome.png"  alt="" id="imgkecil">
+                        </div>
+                        <div class="textArea | borderOriB pb-2">
+                            <div class="text">
+                                <p class="text-md mt-4" id="titleComunity">Chat Course Community</p>
+                                <p class="text-sm grayFont" id="comment">1k commented</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!-- comment  -->
+
+                    <div class="commentReview | grayOri | relative">
+
+                        <div
+                            class="flex justify-center items-center | w-full h-full absolute hover:bg-gray-200/30 hover:backdrop-blur-sm opacity-0 hover:opacity-100 duration-200 ">
+                            <p class="">SeeMore</p>
+                        </div>
+
+                        <div class="humanArea |  w-full h-96 px-7 pt-3 overflow-y-scroll ">
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+                                        <h1 class="text-lg h-5 baskervville-regular">Boow</h1>
+                                        <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2">
+                                    <p class="text-sm grayFont">I can't wait for Vietnamese</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+                                        <h1 class="text-lg h-5 baskervville-regular">LangHunter</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2">
+                                    <p class="text-sm grayFont">Woooooo I want to learn everything🔥🔥</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+
+                                        <h1 class="text-lg h-5 baskervville-regular">MayoLem</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2 ">
+                                    <p class="text-sm grayFont">I Love It</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+
+                                        <h1 class="text-lg h-5 baskervville-regular">Task Sampoerna</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2 ">
+                                    <p class="text-sm grayFont">I managed to finish everything I just need to wait for
+                                        other languages, yeah but not all of them I really want to learn anyway</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+
+                                        <h1 class="text-lg h-5 baskervville-regular">RemYam</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2 ">
+                                    <p class="text-sm grayFont"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="course.js"></script>
+</body>
+
+</html>

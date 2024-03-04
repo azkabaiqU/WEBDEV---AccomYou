@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccomYou | LanguageCourse</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="Gobal.css">
+    <link rel="stylesheet" href="course.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- baskerville clasico -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- baskerville libre -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <nav class=" sticky top-0 |w-full z-20  start-0 bg-white/30 backdrop-blur-xl">
+        <div class=" flex flex-wrap items-center justify-between   py-4  px-20 ">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="img/logo.png" class="h-5" alt="Flowbite Logo">
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="signIn.html"
+                class=" flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">JoinNow </a>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 text-black libre-baskerville-regular">
+                    <li class="">
+                        <a href="home.html"
+                            class="block py-2 px-3  md:p-0 border-b-2 border-transparent hover:border-gray-300 duration-100 "
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="language.html" class="block py-2 px-3  md:p-0  border-b-2 brownBor duration-100">Course</a>
+                    </li>
+                    <li>
+                        <a href="comunity.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100">Comunity</a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navbarCourse">
+
+
+        <div class="fixed | left-0  w-32 ml-20 mt-14 bg-white | borderOriR ">
+
+            <a class="buttonLang " id="buttonlang" href="" onclick="lang()">
+                <div id="btnLang"
+                class="| justify-center flex items-center | w-28 h-16 rounded-xl mb-7  hover:ring-gray-300 hover:ring-1 ring-0   | "
+                    style="background-color: #FFF8E0; ">
+                    <img src="img/translate.png" class="w-6" alt="language">
+                </div>
+                <span class="tooltip | ml-32 mt-5  py-2 px-3 text-sm ">Language</span>
+            </a >
+
+            <a  class="buttonMath " id="buttonmath" href="#" onclick="math()">
+                <div id="btnMath"
+                    class=" justify-center flex items-center | w-28 h-16 rounded-xl mb-10 hover:ring-gray-300 hover:ring-1 ring-0 | grayOri">
+                    <img src="img/math.png" class="w-6" alt="math">
+                </div>
+                <span class="tooltipMath | ml-32 mt-5  py-2 px-3 text-sm">Math</span>
+            </a>
+
+            <a class="buttonSains " id="buttonsains" onclick="sains()">
+                <div id="btnSc"
+                    class=" justify-center flex items-center | w-28 h-16 rounded-xl mb-10 hover:ring-gray-300 hover:ring-1 ring-0 | grayOri">
+                    <img src="img/atom.png" class="w-7" alt="atom">
+                </div>
+                <span class="tooltipSains | ml-32 mt-5  py-2 px-3 text-sm">Science</span>
+            </a>
+
+            
+
+            <button class="buttonMedic " id="buttonmedic" onclick="Medical()">
+                <div id="btnMed"
+                    class=" justify-center flex items-center | w-28 h-16 rounded-xl mb-52 hover:ring-gray-300 hover:ring-1 ring-0 | grayOri">
+                    <img src="img/HospitalIcon.png" class="w-7" alt="">
+                </div>
+                <span class="tooltipMedic | ml-32 mt-5  py-2 px-3 text-sm">Medical</span>
+            </button>
+    </nav>
+
+
+
+    <section id="CourseArea ">
+        <div class=" flex | w-full h-full pr-20  mt-14">
+            <div class=" object-fi h-full " style="width: 220px ; min-width: 220px;"></div>
+            <div class="flex  | w-full h-full " id="content">
+                <div class="contentArea | h-full w-full px-14" >
+
+                    <div class="textArea | monaSans" id="titleUp">
+                        <h1 class="text-6xl font-bold  brownOri" id="title">Upgrade Your <br> Language Skills</h1>
+                        <p class="text-md mt-2 h-5" id="desc">Learning a language is something that is most <br> needed, especially when you study abroad</p>
+                        <p class="grayFont text-sm mt-10" id="statusStudent">10k Student</p>
+                    </div>
+
+                    <div class="content w-full | flex flex-wrap" id="conUp">
+
+                        <a id="EnglishFlag" href="courseLanguage.html" class="w-60 mt-10 text-center  rounded-3xl mr-10 cursor-pointer ">
+                            <img src="img/engflag.png" alt="english" id="img1">
+                            <p class="grayFont | text-sm" id="text1">English</p>
+                        </a>
+                        <div id="IndoFlag" class="w-60 mt-10 text-center  rounded-3xl   mr-10 ">
+                            <img src="img/indoflaf.png" alt="IndonesiaFlag" id="img2">
+                            <p class="grayFont | text-sm" id="text2">Indonesia</p>
+                        </div>
+                        <div id="japanFlag" class="w-60 mt-10 text-center  rounded-3xl   mr-10 ">
+                            <img src="img/japanFlag.png" alt="JapanFlag" id="img3">
+                            <p class="grayFont | text-sm" id="text3">Japan</p>
+                        </div>
+                        <div id="TurkeyFlag" class="w-60 mt-10 text-center  rounded-3xl   mr-10 ">
+                            <img src="img/turkeyFlag.png" alt="TurkeyFlag" id="img4">
+                            
+                            <p class="grayFont | text-sm" id="text4">Turkey</p>
+                        </div>
+                        <div id="Vietnam" class="w-60 mt-10 text-center  rounded-3xl   mr-10 " >
+                            <img src="img/vietnamFlag.png" alt="vietnamFlag" id="img5">
+                            <p class="grayFont | text-sm" id="text5">Vietnamese</p>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="comment |  h-full  borderOriL | " style="width: 500px;">
+                    <!-- img dan textcomment -->
+                    <div class="pl-4">
+                        <div id
+                         class="justify-center flex items-center | w-96 h-56 rounded-3xl grayOri" id="bennerBg">
+                            <img src="img/langHome.png" class="w-auto" alt="" id="imgBg">
+                        </div>
+                        <div class="textArea | borderOriB pb-2">
+                            <div class="text">
+                                <p class="text-md mt-4" id="titleComunity">Chat Course Community</p>
+                                <p class="text-sm grayFont" id="comment">1k commented</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!-- comment  -->
+
+                    <div class="commentReview | grayOri | relative">
+
+                        <a href="comunity.html"
+                            class="flex justify-center items-center | w-full h-full absolute hover:bg-gray-200/30 hover:backdrop-blur-sm opacity-0 hover:opacity-100 duration-200 ">
+                            <p class="">SeeMore</p>
+                    </a>
+
+                        <div class="humanArea |  w-full h-96 px-7 pt-3 overflow-y-scroll ">
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+                                        <h1 class="text-lg h-5 baskervville-regular">Boow</h1>
+                                        <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2">
+                                    <p class="text-sm grayFont">I can't wait for Vietnamese</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+                                        <h1 class="text-lg h-5 baskervville-regular">LangHunter</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2">
+                                    <p class="text-sm grayFont">Woooooo I want to learn everything🔥🔥</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+
+                                        <h1 class="text-lg h-5 baskervville-regular">MayoLem</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2 ">
+                                    <p class="text-sm grayFont">I Love It</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+
+                                        <h1 class="text-lg h-5 baskervville-regular">Task Sampoerna</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2 ">
+                                    <p class="text-sm grayFont">I managed to finish everything I just need to wait for
+                                        other languages, yeah but not all of them I really want to learn anyway</p>
+                                </div>
+                            </div>
+
+                            <div class="Human | h-20 mb-4 ">
+                                <div class="profile | flex">
+                                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                                    <div class="ml-2">
+
+                                        <h1 class="text-lg h-5 baskervville-regular">RemYam</h1>
+                                        <p class="text-sm baskervville-regular mt-0.5">Student</p>
+                                    </div>
+                                </div>
+                                <div class="comtext | mt-2 ">
+                                    <p class="text-sm grayFont"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script >
+       
+       function math(){
+            
+            const title = document.getElementById('title')
+            const desc = document.getElementById('desc')
+            const statusStudent = document.getElementById('statusStudent')
+            const img1 = document.getElementById('img1')
+            const text1 = document.getElementById('text1')
+
+            const img2 = document.getElementById('img2')
+            const text2 = document.getElementById('text2')
+            const img3 = document.getElementById('img3')
+            const text3 = document.getElementById('text3')
+            const img4 = document.getElementById('img4')
+            const text4 = document.getElementById('text4')
+            const vietnam = document.getElementById('vietnam')
+            const img5 = document.getElementById('img5')
+            const text5 = document.getElementById('text5')
+            const link = document.getElementById('EnglishFlag')
+            link.href = '#'
+
+
+
+            title.innerHTML = 'Upgrade Your <br> Math Skill. '
+            desc.innerHTML = 'study mathematics lessons <br> from elementary school to college.'
+            statusStudent.textContent = '2k student'
+            img1.src = 'img/math1.png'
+            text1.textContent = 'Basic'
+            img2.src = 'img/math2.png'
+            text2.textContent = 'Advance'
+            img3.src = 'img/math3.png'
+            text3.textContent = 'Profesional'
+            img4.src = 'img/math4.png'
+            text4.textContent = 'Master'
+            img5.src = 'img/math5.png'
+            text5.textContent = 'Exam'
+//  btn
+            const btn = document.getElementById('btnMath')
+            const btnLang = document.getElementById('btnLang')
+            const btnSc = document.getElementById('btnSc')
+            const btnMed = document.getElementById('btnMed')
+            btn.style.background = '#EEEEFF'
+            btnLang.style.background = '#F9F9F9'
+            btnSc.style.background = '#F9F9F9'
+            btnMed.style.background = '#F9F9F9'
+        }
+        function sains(){
+            
+            const title = document.getElementById('title')
+            const desc = document.getElementById('desc')
+            const statusStudent = document.getElementById('statusStudent')
+            const img1 = document.getElementById('img1')
+            const text1 = document.getElementById('text1')
+
+            const img2 = document.getElementById('img2')
+            const text2 = document.getElementById('text2')
+            const img3 = document.getElementById('img3')
+            const text3 = document.getElementById('text3')
+            const img4 = document.getElementById('img4')
+            const text4 = document.getElementById('text4')
+            const vietnam = document.getElementById('vietnam')
+            const img5 = document.getElementById('img5')
+            const text5 = document.getElementById('text5')
+            const link = document.getElementById('EnglishFlag')
+            link.href = '#'
+
+            title.innerHTML = 'Upgrade Your <br> Sains Skill. '
+            desc.innerHTML = 'learn without having <br> to blow up a laboratory,'
+            statusStudent.textContent = '7k student'
+            img1.src = 'img/sains1.png'
+            text1.textContent = 'Fisika'
+            img2.src = 'img/sains2.png'
+            text2.textContent = 'Kimia'
+            img3.src = 'img/sains3.png'
+            text3.textContent = 'Astronomi'
+            img4.src = 'img/sains4.png'
+            text4.textContent = 'Geologi'
+            img5.src = 'img/math5.png'
+            text5.textContent = 'Exam'
+//  btn
+            const btn = document.getElementById('btnMath')
+            const btnLang = document.getElementById('btnLang')
+            const btnSc = document.getElementById('btnSc')
+            const btnMed = document.getElementById('btnMed')
+            btn.style.background = '#F9F9F9'
+            btnLang.style.background = '#F9F9F9'
+            btnSc.style.background = '#E9FAFF'
+            btnMed.style.background = '#F9F9F9'
+        }
+        function Medical(){
+            
+            const title = document.getElementById('title')
+            const desc = document.getElementById('desc')
+            const statusStudent = document.getElementById('statusStudent')
+            const img1 = document.getElementById('img1')
+            const text1 = document.getElementById('text1')
+
+            const img2 = document.getElementById('img2')
+            const text2 = document.getElementById('text2')
+            const img3 = document.getElementById('img3')
+            const text3 = document.getElementById('text3')
+            const img4 = document.getElementById('img4')
+            const text4 = document.getElementById('text4')
+            const vietnam = document.getElementById('vietnam')
+            const img5 = document.getElementById('img5')
+            const text5 = document.getElementById('text5')
+            const link = document.getElementById('EnglishFlag')
+            link.href = '#'
+
+            title.innerHTML = 'Upgrade Your <br> Medical Skill. '
+            desc.innerHTML = 'Study until you can save the people you love, <br> even ordinary people, but will we learn medical lessons easily? <br> Dont worry, we will help you!'
+            statusStudent.textContent = '13k student'
+            statusStudent.style.marginTop = '70px'
+            img1.src = 'img/me1.png'
+            text1.textContent = 'biological cells'
+            img2.src = 'img/me2.png'
+            text2.textContent = 'Environmental Biotechnology'
+            img3.src = 'img/me3.png'
+            text3.textContent = 'Biologi Molekuler '
+            img4.src = 'img/me4.png'
+            text4.textContent = 'Patologi Anatomi'
+            img5.src = 'img/math5.png'
+            text5.textContent = 'Exam'
+//  btn
+            const btn = document.getElementById('btnMath')
+            const btnLang = document.getElementById('btnLang')
+            const btnSc = document.getElementById('btnSc')
+            const btnMed = document.getElementById('btnMed')
+            btn.style.background = '#F9F9F9'
+            btnLang.style.background = '#F9F9F9'
+            btnSc.style.background = '#F9F9F9'
+            btnMed.style.background = '#E9FFEF'
+        }
+
+    </script>
+</body>
+
+</html>
